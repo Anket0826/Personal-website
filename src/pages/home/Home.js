@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import '../../styles/Home.scss'
-import About from "../about/About";
 import Typed from "typed.js";
 
 const Home = () => {
@@ -20,7 +19,7 @@ const Home = () => {
         return () => {
             typedRef.current.destroy();
         };
-    }, []);
+    });
 
     return (
         <>
@@ -57,17 +56,17 @@ const Home = () => {
                     </div>
                     <div className="icons">
                         <div>
-                            <a href="https://www.facebook.com/login/" target="_blank">
+                            <a href="https://www.facebook.com/login/" target="_blank" rel="noreferrer">
                                 <i className="fa-brands fa-facebook-f"></i>
                             </a>
                         </div>
                         <div>
-                            <a href="https://www.linkedin.com/feed/" target="_blank">
+                            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer" >
                                 <i className="fa-brands fa-linkedin-in"></i>
                             </a>
                         </div>
                         <div>
-                            <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank">
+                            <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noreferrer">
                                 <i className="fa-brands fa-instagram"></i>
                             </a>
                         </div>
