@@ -74,7 +74,7 @@ const About = () => {
                     </div>
                     
                  <div className="d-flex sing">
-                 <img className="mt-3 Signature" src={Singntrue} alt="Signature" />              
+                 <img className="mt-3 Signature" src={Singntrue} alt="Signature"/>              
                     <div className="Bruce d-flex">
                         <h4 className="sing">Bruce Wayne</h4>
                         <span className="ml-2">Software Architect, Google Inc.</span>

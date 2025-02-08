@@ -80,6 +80,7 @@ const Home = () => {
                 <div className="card">
                     <img src="https://ethemestudio.com/demo/thames/1_home_main/images/icon/intro-ft-icon1.png"
                         className="middle_name mr-5"
+                        alt=""
                     />
                     <h3 >Dedication</h3>
                     <span className="Seaque">Seaque ipsa quae ab illo inven tore veritatis et qua si architecto beatae atis et sopno vitae.</span>
@@ -88,6 +89,7 @@ const Home = () => {
                 <div className="card mt-5 middle-card">
                     <img src="https://ethemestudio.com/demo/thames/1_home_main/images/icon/intro-ft-icon2.png"
                         className="middle_name mr-5"
+                        alt=""
                     />
                     <h3 >Smart Work</h3>
                     <span className="Seaque">Seaque ipsa quae ab illo inven tore veritatis et qua si architecto beatae atis et sopno vitae.</span>
@@ -96,6 +98,7 @@ const Home = () => {
                 <div className="card">
                     <img src="https://ethemestudio.com/demo/thames/1_home_main/images/icon/intro-ft-icon3.png"
                         className="middle_name mr-5"
+                        alt=""
                     />
                     <h3 >Collaboration</h3>
                     <span className="Seaque">Seaque ipsa quae ab illo inven tore veritatis et qua si architecto beatae atis et sopno vitae.</span>
@@ -104,6 +107,7 @@ const Home = () => {
                 <div className="card mt-5 middle-card">
                     <img src="https://ethemestudio.com/demo/thames/1_home_main/images/icon/intro-ft-icon4.png"
                         className="middle_name mr-5"
+                        alt=""
                     />
                     <h3 >Technology</h3>
                     <span className="Seaque">Seaque ipsa quae ab illo inven tore veritatis et qua si architecto beatae atis et sopno vitae.</span>
