@@ -64,7 +64,7 @@ const Header = () => {
           <div className="icons-resp">
             <div><i class="fa-brands fa-facebook-f"></i></div>
             <div>
-              <a href="https://www.linkedin.com/feed/" target="_blank">
+              <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
             </div>
