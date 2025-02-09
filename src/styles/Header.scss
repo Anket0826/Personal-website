@@ -23,15 +23,20 @@
     @media (max-width: 768px) {
         font-size: 1.3rem;
     }
+
+    @media (max-width: 1224px) {
+        font-size: 1.2rem;
+    }
 }
 
 .header_content {
     display: flex;
-    gap: 30px;
+    gap: 10px;
+    margin-left: 30%;
 
     span {
         color: white;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 600;
         cursor: pointer;
         transition: color 0.3s ease;
@@ -39,14 +44,20 @@
         &:hover {
             color: rgb(6, 220, 6);
         }
+
+        @media (max-width: 1224px) {
+            font-size: 1rem;
+        }
     }
 
     @media (max-width: 768px) {
         display: none;
     }
-    @media (max-width: 1024px){
-      display: none;
+
+    @media (max-width: 1024px) {
+        display: none;
     }
+
 }
 
 .download_button {
@@ -147,7 +158,8 @@
     @media (max-width: 768px) {
         display: block;
     }
-    @media (max-width: 1024px){
+
+    @media (max-width: 1024px) {
         display: block;
     }
 }
@@ -198,7 +210,7 @@
     }
 }
 
-.icons-resp{
+.icons-resp {
     display: flex;
     gap: 30px;
 }

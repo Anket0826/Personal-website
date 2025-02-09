@@ -14,7 +14,6 @@ const Header = () => {
     <header className="header">
       <div className="header_name">ANKET PAWAR</div>
       <div className="header_content">
-
         <ScrollLink className="nav-link" to="/" smooth={true} duration={700} offset={-70}>
           <span>Home</span>
         </ScrollLink>
@@ -34,7 +33,6 @@ const Header = () => {
         <ScrollLink className="nav-link" to="contact" smooth={true} duration={500} offset={-70}>
           <span>Contact</span>
         </ScrollLink>
-
       </div>
       <button className="download_button">DOWNLOAD CV</button>
       <div className="menu_icon" onClick={toggleMenu}>

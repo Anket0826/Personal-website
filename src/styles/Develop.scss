@@ -1,0 +1,126 @@
+.develop_page {
+    background-color: #25262f;
+    height: 100vh;
+
+    @media (max-width: 480px) {
+        height: auto;
+    }
+
+    @media(max-width: 768px) {
+        height: auto;
+    }
+
+    @media(max-width: 1224px) {
+        height: auto;
+    }
+}
+
+.fun {
+    color: rgb(152, 255, 152);
+    letter-spacing: 5px;
+    font-size: 20px;
+
+    @media(max-width: 480px) {
+        font-size: 1.1rem;
+        letter-spacing: 0px;
+    }
+
+    @media(max-width: 1536px) {
+        font-size: 1rem;
+    }
+}
+
+.develop_content {
+    padding: 10px;
+    padding-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card_text {
+    color: #73f540;
+    font-size: 65px;
+    display: block;
+}
+
+.card_title {
+    color: white;
+    font-size: 20px;
+    align-content: center;
+    text-align: start;
+    margin-left: 20px;
+}
+
+.develop_title {
+    color: white;
+    font-size: 60px;
+    margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+        font-size: 36px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 35px;
+    }
+
+    // @media(max-width: 1536px){
+    //     font-size: 2.5rem;
+    // }
+}
+
+.dev_descri {
+    color: #a0a0bb;
+    font-size: 20px;
+
+    @media (max-width: 480px) {
+        font-size: 16px;
+    }
+
+    @media(max-width: 1536px) {
+        font-size: 1.2rem;
+    }
+}
+
+.left_content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.right_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.columan {
+    border: 1px solid rgb(108, 108, 108);
+    border-radius: 10px;
+    padding: 20px;
+    width: 270px;
+    height: 150px;
+    justify-content: center;
+
+    @media (max-width: 480px) {
+        width: 82%;
+        height: 150px;
+        justify-content: center;
+        display: flex;
+    }
+
+}
+
+.main_card {
+    display: flex;
+    gap: 29px;
+    justify-content: center;
+
+    @media(max-width: 480px) {
+        flex-wrap: wrap;
+    }
+}

@@ -1,6 +1,22 @@
 .works_page {
     background-color: rgb(221, 244, 248);
-    height: 240vh;
+    height: 170vh;
+
+    @media(max-width: 480px) {
+        height: auto;
+    }
+
+    @media(max-width: 1536px) {
+        height: auto;
+    }
+
+    @media(max-width: 1224px) {
+        height: auto;
+    }
+
+    @media(max-width: 1024px) {
+        height: auto;
+    }
 }
 
 .works_page {

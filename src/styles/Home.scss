@@ -16,6 +16,17 @@
     padding-top: 55px;
     margin-bottom: -50px;
     color: white;
+
+    @media (max-width: 768px) {
+        text-align: center;
+        font-size: 2.3rem;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
 }
 
 .hello_im {
@@ -226,7 +237,7 @@
         height: 180px;
         width: 180px;
         right: 25%;
-        top: 24rem;
+        top: 26rem;
     }
 }
 

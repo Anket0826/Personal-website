@@ -28,7 +28,7 @@ const Home = () => {
                 <div className="self_name">
                     <span className="hello_im">HELLO I'M</span>
                     <div>
-                        <h3 className="iam-text">I Am,</h3>
+                        <h3 className="iam-text">Hi I Am,</h3>
                         <h1 className="my_name">Anket<span> Pawar</span></h1>
                     </div>
 
