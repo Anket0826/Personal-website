@@ -4,6 +4,8 @@ import About from "../../pages/about/About";
 import Works from "../../pages/works/Works";
 import Home from "../../pages/home/Home";
 import Develop from "../../pages/develop/Develop";
+import Achivement from "../../pages/achivements/Achivements";
+import Experience from "../../pages/experience/Experience";
 
 const Router = () => {
   return (
@@ -19,9 +21,19 @@ const Router = () => {
       <section id="works">
         <Works />
       </section>
+
       <section id="develop">
         <Develop/>
       </section>
+
+      <section id="achivement">
+       <Achivement />
+      </section>
+
+      <section id="experience">
+       <Experience />
+      </section>
+      
       {/* <section id="service">
         <h2>Our Services</h2>
       </section>

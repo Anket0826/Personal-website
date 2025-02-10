@@ -1,0 +1,132 @@
+.achivements_page {
+    background-color: rgb(227, 247, 255);
+    height: auto;
+
+    @media (max-width: 480px) {
+        height: auto;
+    }
+
+    @media(max-width: 768px) {
+        height: auto;
+    }
+
+    @media(max-width: 1224px) {
+        height: auto;
+    }
+}
+
+.achive_title {
+    padding-top: 10%;
+    text-align: center;
+}
+
+.storise {
+    letter-spacing: 6px;
+    font-size: 20px;
+    color: rgb(81, 218, 110);
+
+    @media(max-width: 480px) {
+        font-size: 18px;
+        letter-spacing: normal;
+        line-height: 25px;
+    }
+}
+
+.storise_title {
+    font-size: 60px;
+
+    @media (max-width: 768px) {
+        font-size: 40px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 30px;
+    }
+}
+
+.acivement_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 60px;
+
+    @media(max-width: 480px) {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+
+.acivement_list img {
+    width: 130px;
+    height: auto;
+
+    @media (max-width: 768px) {
+        width: 100px;
+    }
+
+    @media (max-width: 480px) {
+        width: 80px;
+        margin-left: 40%;
+    }
+
+    @media(max-width: 1024px) {
+        width: 70px;
+    }
+}
+
+.acivement_list div {
+    font-size: 23px;
+    line-height: 30px;
+    padding-top: 10px;
+    width: 300px;
+    font-weight: 600;
+
+    @media (max-width: 768px) {
+        width: 250px;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    @media(max-width: 1024px) {
+        font-size: 15px;
+    }
+}
+
+.acivement_list p {
+    font-size: 18px;
+    color: gray;
+    margin-top: 5px;
+
+    @media (max-width: 480px) {
+        font-size: 16px;
+    }
+
+    @media(max-width: 1024px) {
+        font-size: 10px;
+    }
+}
+
+.acivement_list>div:nth-child(3) {
+    flex: 1;
+    min-width: 200px;
+}
+
+.acivement_list>div:nth-child(4) {
+    flex: 2;
+}
+
+@media (max-width: 768px) {
+    .acivement_list {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .acivement_list {
+        gap: 0px;
+    }
+}

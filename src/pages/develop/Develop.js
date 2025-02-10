@@ -10,20 +10,17 @@ const Develop = () => {
             ([entry]) => {
                 setIsVisible(entry.isIntersecting);
             },
-            { threshold: 0.3 }
         );
         const aboutSection = document.getElementById("develop");
-        if (aboutSection) observer.observe(aboutSection);
-
-        return () => {
-            if (aboutSection) observer.unobserve(aboutSection);
-        };
+        if (aboutSection) {
+            observer.observe(aboutSection)
+        }
     }, []);
 
     return (
         <motion.div
             initial={{ y: 50, opacity: 0 }}
-            animate={isVisible ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+            animate={isVisible ? { y: 0, opacity: 1 } : { y: 100, opacity: 1 }}
             transition={{ type: "spring", stiffness: 40, damping: 25 }}
             id="develop">
             <div className="develop_page">
