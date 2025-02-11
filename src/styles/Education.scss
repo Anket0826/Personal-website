@@ -5,9 +5,17 @@
 
 .education_container {
     display: flex;
+    justify-content: space-between;
     flex: 1;
     padding-top: 100px;
-    margin: 10px;
+
+    @media (max-width: 480px) {
+        flex-wrap: wrap;
+    }
+
+    @media(max-width: 1024px) {
+        flex-wrap: wrap;
+    }
 }
 
 .edu_title1 {
@@ -18,15 +26,151 @@
 }
 
 .left_container {
+    margin-left: 2%;
+
+    @media(max-width: 480px) {
+        margin-left: 7%;
+    }
+
+    @media(max-width: 1024px) {
+        margin-left: 7%;
+    }
+
 
     h1 {
         font-size: 60px;
+
+        @media(max-width: 480px) {
+            font-size: 3rem !important;
+        }
+
+        @media (max-width: 1224px) {
+            font-size: 2.3rem;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 2.5rem;
+        }
     }
 
-    p {
-        font-family: "Open Sans", sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        color: rgb(77, 77, 92);
+    h3 {
+        font-weight: 600;
+        margin-bottom: 5px;
+
+        @media(max-width: 480px) {
+            font-size: 1.3rem !important;
+        }
+
+        @media (max-width: 1224px) {
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 1.8rem;
+        }
     }
+
+    h5 {
+        @media(max-width: 480px) {
+            font-size: 1rem !important;
+        }
+
+        @media (max-width: 1224px) {
+            font-size: 1rem;
+        }
+    }
+}
+
+.edu_title1 {
+    font-size: 18px;
+    letter-spacing: 7px;
+    color: #62da68;
+
+    @media(max-width: 480px) {
+        font-size: 15px !important;
+    }
+
+    @media (max-width: 1224px) {
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 1.1rem;
+    }
+}
+
+.icon_style_education {
+    width: 70px;
+    border: 1px solid #62da68;
+    height: 70px;
+    align-content: center;
+    text-align: center;
+    border-radius: 7px;
+    background-color: #62da68;
+    margin-right: 30px;
+    cursor: pointer;
+
+    @media(max-width: 480px) {
+        width: 7rem !important;
+        height: 50px !important;
+        margin-right: 15px !important;
+        font-size: 1rem !important;
+    }
+
+    @media (max-width: 1224px) {
+        width: 3rem;
+        height: 50px;
+        margin-right: 19px;
+    }
+
+    @media (max-width: 1024px) {
+        margin-right: 30px;
+        width: 70px;
+        height: 60px;
+    }
+}
+
+.icon_style_education:hover {
+    background-color: transparent;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.educa_des {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.67;
+    color: #4d4d5c;
+
+    @media(max-width: 480px) {
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 1224px) {
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 1024px) {
+        padding-top: 10px;
+    }
+}
+
+.educa_img {
+
+    @media(max-width: 480px) {
+        margin: 20px;
+        width: 90%;
+        height: auto;
+        right: 15px !important;
+        position: relative;
+    }
+
+    @media (max-width: 1024px) {
+        width: 85% !important;
+        height: auto;
+        margin-left: 45px;
+        display: block;
+    }
+
 }
