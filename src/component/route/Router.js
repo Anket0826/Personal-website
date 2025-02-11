@@ -6,6 +6,7 @@ import Home from "../../pages/home/Home";
 import Develop from "../../pages/develop/Develop";
 import Achivement from "../../pages/achivements/Achivements";
 import Experience from "../../pages/experience/Experience";
+import Education from "../../pages/education/Education";
 
 const Router = () => {
   return (
@@ -34,6 +35,10 @@ const Router = () => {
        <Experience />
       </section>
       
+      <section id="education">
+       <Education />
+      </section>
+
       {/* <section id="service">
         <h2>Our Services</h2>
       </section>

@@ -87,13 +87,6 @@
     letter-spacing: 7px;
 }
 
-// .recent_works {
-//     font-size: 60px;
-//     @media (max-width: 768px) {
-//             font-size: 2.4rem;
-//     }
-// }
-
 .web_design {
     border-bottom: 1px solid gray;
 }
@@ -138,7 +131,7 @@
 
 
     @media (max-width: 1024px) {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         margin-left: 0;
         line-height: 1.5rem;
     }
@@ -160,7 +153,6 @@
 
 .class-hover {
     display: flex;
-    // align-items: center;
     justify-content: space-between;
     margin-top: 20px;
     flex-wrap: wrap;
@@ -185,7 +177,7 @@
     z-index: 1000;
 
     @media (max-width: 1024px) {
-        width: 12rem;
+        width: 10rem !important;
     }
 
     @media (max-width: 1536px) {
@@ -245,9 +237,12 @@
     transition: all 0.3s ease-in-out;
 
     @media (max-width: 1024px) {
-        height: 40px;
-        width: 40px;
+        height: 50px;
+        width: 50px;
         font-size: 1rem;
+        position: relative;
+        right: 65%;
+        bottom: 50px;
     }
 
     @media (max-width: 1536px) {
