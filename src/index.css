@@ -1,3 +1,4 @@
 body {
-  font-family:"jost-medium-font";
+  font-family: "jost-medium-font";
+  overflow-x: hidden;
 }

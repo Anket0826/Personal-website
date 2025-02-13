@@ -7,6 +7,7 @@ import Develop from "../../pages/develop/Develop";
 import Achivement from "../../pages/achivements/Achivements";
 import Experience from "../../pages/experience/Experience";
 import Education from "../../pages/education/Education";
+import Skill from "../../pages/skill/Skill";
 
 const Router = () => {
   return (
@@ -37,6 +38,10 @@ const Router = () => {
       
       <section id="education">
        <Education />
+      </section>
+
+      <section id="skill">
+       <Skill />
       </section>
 
       {/* <section id="service">
