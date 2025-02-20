@@ -21,7 +21,6 @@ const Skill = () => {
             ([entry]) => {
                 setIsVisible(entry.isIntersecting);
             },
-            { threshold: 0.1 }
         );
         const education = document.getElementById("skill");
         if (education) observer.observe(education);
@@ -50,7 +49,7 @@ const Skill = () => {
                     <motion.div
                         initial={{ y: "50vh", opacity: 0 }}
                         animate={isVisible ? { y: 0, opacity: 1 } : { y: "50vh", opacity: 0 }}
-                        transition={{ type: "spring", stiffness: 25, }}
+                        transition={{ type: "spring", stiffness: 20, }}
                     >
                         <div className='circle-progress'>
                             {skills.map((skill, index) => (
