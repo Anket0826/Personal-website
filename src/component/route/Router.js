@@ -9,6 +9,7 @@ import Experience from "../../pages/experience/Experience";
 import Education from "../../pages/education/Education";
 import Skill from "../../pages/skill/Skill";
 import Service from "../../pages/service/Service";
+import Testimonials from "../../pages/testimonials/Testimonials";
 
 const Router = () => {
   return (
@@ -47,6 +48,10 @@ const Router = () => {
 
       <section id="service">
         <Service />
+      </section>
+
+      <section id="testimonials">
+        <Testimonials />
       </section>
 
       {/* <section id="service">
