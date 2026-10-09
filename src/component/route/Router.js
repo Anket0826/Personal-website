@@ -1,66 +1,59 @@
 import React from "react";
-import "../../styles/Home.scss";
+import Home from "../../pages/home/Home";
 import About from "../../pages/about/About";
 import Works from "../../pages/works/Works";
-import Home from "../../pages/home/Home";
 import Develop from "../../pages/develop/Develop";
-import Achivement from "../../pages/achivements/Achivements";
+import Achievements from "../../pages/achivements/Achivements";
 import Experience from "../../pages/experience/Experience";
 import Education from "../../pages/education/Education";
 import Skill from "../../pages/skill/Skill";
 import Service from "../../pages/service/Service";
 import Testimonials from "../../pages/testimonials/Testimonials";
+import Contact from "../../pages/contact/Contact";
+import Footer from "../footer/Footer";
+import BackToTop from "../common/BackToTop";
 
 const Router = () => {
   return (
-    <div>
-      <section id="/">
-        <Home/>
-      </section>
+    <div className="portfolio_layout">
+      {/* Home / Hero Section */}
+      <Home />
 
-      <section id="about">
-        <About />
-      </section>
+      {/* About Section */}
+      <About />
 
-      <section id="works">
-        <Works />
-      </section>
+      {/* Featured Works / Portfolio */}
+      <Works />
 
-      <section id="develop">
-        <Develop/>
-      </section>
+      {/* Experience Section */}
+      <Experience />
 
-      <section id="achivement">
-       <Achivement />
-      </section>
+      {/* Education Section */}
+      <Education />
 
-      <section id="experience">
-       <Experience />
-      </section>
-      
-      <section id="education">
-       <Education />
-      </section>
+      {/* Technical Skills */}
+      <Skill />
 
-      <section id="skill">
-       <Skill />
-      </section>
+      {/* Key Milestones & Stats */}
+      <Develop />
 
-      <section id="service">
-        <Service />
-      </section>
+      {/* Services Offered */}
+      <Service />
 
-      <section id="testimonials">
-        <Testimonials />
-      </section>
+      {/* Honors & Achievements */}
+      <Achievements />
 
-      {/* <section id="service">
-        <h2>Our Services</h2>
-      </section>
+      {/* Testimonials */}
+      <Testimonials />
 
-      <section id="contact">
-        <h2>Contact Us</h2>
-      </section> */}
+      {/* Functional Contact Section */}
+      <Contact />
+
+      {/* Global Footer */}
+      <Footer />
+
+      {/* Floating Back To Top Button */}
+      <BackToTop />
     </div>
   );
 };

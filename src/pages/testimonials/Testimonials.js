@@ -1,62 +1,124 @@
-import React, { useEffect, useState } from 'react'
-import '../../styles/Testimonials.scss'
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import "../../styles/Testimonials.scss";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FaStar, FaQuoteLeft } from "react-icons/fa";
+
+const testimonialsData = [
+  {
+    id: 1,
+    quote: "Anket delivered our web application with incredible speed and attention to detail. His understanding of React architectures and responsive UI design exceeded our expectations.",
+    name: "Rahul Deshmukh",
+    role: "Product Lead",
+    company: "Apex Tech Innovations",
+    rating: 5,
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+  },
+  {
+    id: 2,
+    quote: "Working with Anket was seamless. He has a strong grasp of modern frontend performance, modular styling, and clean code principles. Highly recommended for any web project!",
+    name: "Sneha Patil",
+    role: "Engineering Manager",
+    company: "NovaByte Solutions",
+    rating: 5,
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+  },
+  {
+    id: 3,
+    quote: "From initial design review to deployment, Anket's proactive communication and problem-solving skills made the whole development journey effortless and high quality.",
+    name: "Vikram Kulkarni",
+    role: "Founder & Director",
+    company: "CloudScale Digital",
+    rating: 5,
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+  },
+];
 
 const Testimonials = () => {
-    const [isVisible, setIsVisible] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsVisible(entry.isIntersecting);
-            },
-            { threshold: 0.1 }
-        );
-        const education = document.getElementById("testimonials");
-        if (education) observer.observe(education);
-    }, []);
-    return (
-        <div className='testimonials_page'>
-            <div className='main-content'>
-                <div className='l-content'>
-                    <div className='text-uppercase test-title'>
-                        Testimonials
-                    </div>
-                    <h1>What People Say</h1>
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? testimonialsData.length - 1 : prev - 1));
+  };
 
-                    <div className='pt-5 d-flex gap-3'>
-                        <img className='pt-2 testimonial-icon' src='https://thames-demo-nuxt.vercel.app/images/testimonial/testimonial-icon.png' alt='' height={45} />
-                        <span className='description-test ml-3'>
-                            Excepteur sint occaecat cupidatat non proiden sunt in<span className="br-desktop-experi"><br /></span> 
-                            culpa qui officia deserunt mollit anim id est laebor um.<span className="br-desktop-experi"><br /></span> 
-                            Sed ut perspiciatis unde omnis iste natus error sit volup<span className="br-desktop-experi"><br /></span> 
-                            tatem gotiraz bole ami ke
-                        </span>
-                    </div>
-                    <div class="testi-info d-flex align-items-center pt-4 ml-5">
-                        <div class="testi-avatar">
-                            <img className="rounded-circle" src="https://thames-demo-nuxt.vercel.app/images/testimonial/author-img.jpg" alt="author">
-                            </img>
-                        </div>
-                        <div class="avatar-info">
-                            <h5 class="mb-1 text-capitalize">Paul Harrison,</h5><p class="meta-text-color mb-0">codeefly</p>
-                        </div>
-                    </div>
-                </div>
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === testimonialsData.length - 1 ? 0 : prev + 1));
+  };
 
-                <div className='r-content'>
-                    <motion.div
-                        initial={{ x: "20vw", opacity: 0 }}
-                        animate={isVisible ? { x: 0, opacity: 1 } : { x: "20vw", opacity: 0 }}
-                        transition={{ type: "spring", stiffness: 20, damping: 15 }}>
-                        <img className='test-img'
-                            src='https://thames-demo-nuxt.vercel.app/images/testimonial/testimonials-img.jpg' alt='' />
-                    </motion.div>
-                </div>
+  const current = testimonialsData[currentIndex];
 
-            </div>
+  return (
+    <section id="testimonials" className="testimonials_page">
+      <div className="testimonials_container">
+        <div className="testimonials_header text-center">
+          <span className="test_badge">CLIENT ENDORSEMENTS</span>
+          <h2 className="test_headline">What Collaborators Say</h2>
+          <p className="test_subhead">
+            Feedback from team leads, clients, and partners who have trusted my software development work.
+          </p>
         </div>
-    )
-}
 
-export default Testimonials
+        <div className="testimonials_slider_wrapper">
+          <div className="testimonial_card">
+            <div className="quote_icon_box">
+              <FaQuoteLeft />
+            </div>
+
+            <div className="star_rating">
+              {[...Array(current.rating)].map((_, i) => (
+                <FaStar key={i} />
+              ))}
+            </div>
+
+            <p className="quote_text">"{current.quote}"</p>
+
+            <div className="client_meta_row">
+              <img
+                src={current.avatar}
+                alt={current.name}
+                className="client_avatar"
+                loading="lazy"
+              />
+              <div className="client_details">
+                <h4 className="client_name">{current.name}</h4>
+                <p className="client_role">
+                  {current.role} • <span>{current.company}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Controls */}
+          <div className="slider_controls">
+            <button
+              className="ctrl_btn"
+              onClick={handlePrev}
+              aria-label="Previous testimonial"
+            >
+              <FiChevronLeft />
+            </button>
+
+            <div className="dots_indicators">
+              {testimonialsData.map((_, idx) => (
+                <span
+                  key={idx}
+                  className={`dot_indicator ${currentIndex === idx ? "active" : ""}`}
+                  onClick={() => setCurrentIndex(idx)}
+                />
+              ))}
+            </div>
+
+            <button
+              className="ctrl_btn"
+              onClick={handleNext}
+              aria-label="Next testimonial"
+            >
+              <FiChevronRight />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;

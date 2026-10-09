@@ -1,126 +1,129 @@
 .develop_page {
-    background-color: #25262f;
-    height: 100vh;
-
-    @media (max-width: 480px) {
-        height: auto;
-    }
-
-    @media(max-width: 768px) {
-        height: auto;
-    }
-
-    @media(max-width: 1224px) {
-        height: auto;
-    }
+  background-color: #0f172a;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 90px 24px;
+  position: relative;
+  overflow: hidden;
 }
 
-.fun {
-    color: rgb(152, 255, 152);
-    letter-spacing: 5px;
-    font-size: 20px;
-
-    @media(max-width: 480px) {
-        font-size: 1.1rem;
-        letter-spacing: 0px;
-    }
-
-    @media(max-width: 1536px) {
-        font-size: 1rem;
-    }
+.develop_container {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .develop_content {
-    padding: 10px;
-    padding-top: 150px;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-}
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 50px;
+  align-items: center;
 
-.card_text {
-    color: #73f540;
-    font-size: 65px;
-    display: block;
-}
-
-.card_title {
-    color: white;
-    font-size: 20px;
-    align-content: center;
-    text-align: start;
-    margin-left: 20px;
-}
-
-.develop_title {
-    color: white;
-    font-size: 60px;
-    margin-bottom: 30px;
-
-    @media (max-width: 768px) {
-        font-size: 36px;
-    }
-
-    @media (max-width: 480px) {
-        font-size: 35px;
-    }
-
-    // @media(max-width: 1536px){
-    //     font-size: 2.5rem;
-    // }
-}
-
-.dev_descri {
-    color: #a0a0bb;
-    font-size: 20px;
-
-    @media (max-width: 480px) {
-        font-size: 16px;
-    }
-
-    @media(max-width: 1536px) {
-        font-size: 1.2rem;
-    }
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 
 .left_content {
-    flex: 1;
-    min-width: 300px;
+  .fun {
+    color: #10b981;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .develop_title {
+    color: #f9fafb;
+    font-size: 2.7rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  .dev_descri {
+    color: #9ca3af;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 0.95rem;
+    }
+  }
 }
 
-.right_content {
-    flex: 1;
+/* Stats Grid */
+.stats_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media (max-width: 520px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat_card {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    border-color: rgba(16, 185, 129, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(16, 185, 129, 0.1);
+
+    .stat_icon_box {
+      background: #10b981;
+      color: #ffffff;
+    }
+  }
+
+  .stat_icon_box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    color: #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+
+  .stat_info {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    text-align: center;
-}
 
-.columan {
-    border: 1px solid rgb(108, 108, 108);
-    border-radius: 10px;
-    padding: 20px;
-    width: 270px;
-    height: 150px;
-    justify-content: center;
-
-    @media (max-width: 480px) {
-        width: 82%;
-        height: 150px;
-        justify-content: center;
-        display: flex;
+    .stat_number {
+      color: #f9fafb;
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.1;
+      font-family: 'JetBrains Mono', monospace;
     }
 
-}
-
-.main_card {
-    display: flex;
-    gap: 29px;
-    justify-content: center;
-
-    @media(max-width: 480px) {
-        flex-wrap: wrap;
+    .stat_label {
+      color: #9ca3af;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 4px;
     }
+  }
 }

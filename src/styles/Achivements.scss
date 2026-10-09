@@ -1,132 +1,156 @@
-.achivements_page {
-    background-color: rgb(227, 247, 255);
-    height: auto;
-
-    @media (max-width: 480px) {
-        height: auto;
-    }
-
-    @media(max-width: 768px) {
-        height: auto;
-    }
-
-    @media(max-width: 1224px) {
-        height: auto;
-    }
+.achievements_page {
+  background-color: #0b0f17;
+  padding: 90px 24px;
+  position: relative;
+  overflow: hidden;
 }
 
-.achive_title {
-    padding-top: 10%;
-    text-align: center;
+.achievements_container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.storise {
-    letter-spacing: 6px;
-    font-size: 20px;
-    color: rgb(81, 218, 110);
+.achieve_header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 50px;
 
-    @media(max-width: 480px) {
-        font-size: 18px;
-        letter-spacing: normal;
-        line-height: 25px;
-    }
-}
+  .stories_badge {
+    color: #10b981;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
 
-.storise_title {
-    font-size: 60px;
+  .stories_title {
+    color: #f9fafb;
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
 
     @media (max-width: 768px) {
-        font-size: 40px;
+      font-size: 2rem;
     }
+  }
 
-    @media (max-width: 480px) {
-        font-size: 30px;
-    }
-}
-
-.acivement_list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    gap: 60px;
-
-    @media(max-width: 480px) {
-        flex-wrap: wrap;
-        text-align: center;
-    }
-}
-
-.acivement_list img {
-    width: 130px;
-    height: auto;
+  .stories_desc {
+    color: #9ca3af;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
 
     @media (max-width: 768px) {
-        width: 100px;
+      font-size: 0.95rem;
     }
-
-    @media (max-width: 480px) {
-        width: 80px;
-        margin-left: 40%;
-    }
-
-    @media(max-width: 1024px) {
-        width: 70px;
-    }
+  }
 }
 
-.acivement_list div {
-    font-size: 23px;
-    line-height: 30px;
-    padding-top: 10px;
-    width: 300px;
+.achievements_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.achievement_item_card {
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 70px 1.2fr 1.2fr 1.8fr;
+  align-items: center;
+  gap: 24px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    border-color: rgba(16, 185, 129, 0.35);
+    background: rgba(17, 24, 39, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+    .award_badge_icon {
+      background: #10b981;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: 60px 1fr 1fr;
+    .award_desc_col {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 16px;
+
+    .award_icon_col {
+      display: none;
+    }
+  }
+}
+
+.award_badge_icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.award_title_col {
+  h3 {
+    color: #f9fafb;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+
+  .award_year {
+    color: #10b981;
+    font-size: 0.85rem;
     font-weight: 600;
-
-    @media (max-width: 768px) {
-        width: 250px;
-    }
-
-    @media (max-width: 480px) {
-        width: 100%;
-        font-size: 18px;
-    }
-
-    @media(max-width: 1024px) {
-        font-size: 15px;
-    }
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
 }
 
-.acivement_list p {
-    font-size: 18px;
-    color: gray;
-    margin-top: 5px;
+.award_org_col {
+  strong {
+    color: #e5e7eb;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 4px;
+  }
 
-    @media (max-width: 480px) {
-        font-size: 16px;
-    }
-
-    @media(max-width: 1024px) {
-        font-size: 10px;
-    }
+  .award_loc {
+    color: #9ca3af;
+    font-size: 0.82rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
 }
 
-.acivement_list>div:nth-child(3) {
-    flex: 1;
-    min-width: 200px;
-}
-
-.acivement_list>div:nth-child(4) {
-    flex: 2;
-}
-
-@media (max-width: 768px) {
-    .acivement_list {
-        gap: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .acivement_list {
-        gap: 0px;
-    }
+.award_desc_col {
+  p {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 0;
+  }
 }
